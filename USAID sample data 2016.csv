@@ -1,102 +1,100 @@
-country_code,country_name,transaction_type_name,fiscal_year,current_amount
-AFG,Afghanistan,Disbursements,2016,71421886
-ALB,Albania,Disbursements,2016,297711
-AGO,Angola,Disbursements,2016,43531837
-ATG,Antigua and Barbuda,Disbursements,2016,3780
-ARM,Armenia,Disbursements,2016,3752654
-ASN,Asia Region,Disbursements,2016,8056544
-BGD,Bangladesh,Disbursements,2016,91567573
-BRB,Barbados,Disbursements,2016,4593
-BLZ,Belize,Disbursements,2016,1258162
-BEN,Benin,Disbursements,2016,23070427
-BWA,Botswana,Disbursements,2016,13507566
-BFA,Burkina Faso,Disbursements,2016,25197220
-MMR,Burma (Myanmar),Disbursements,2016,21514817
-BDI,Burundi,Disbursements,2016,22789793
-CPV,Cabo Verde,Disbursements,2016,3003913
-KHM,Cambodia,Disbursements,2016,40987533
-CMR,Cameroon,Disbursements,2016,22712035
-CHN,China (P.R.C.),Disbursements,2016,1164167
-COL,Colombia,Disbursements,2016,2861
-COG,Congo (Brazzaville),Disbursements,2016,327396
-COD,Congo (Kinshasa),Disbursements,2016,102253241
-CIV,Cote d'Ivoire,Disbursements,2016,26680429
-DJI,Djibouti,Disbursements,2016,1377725
-DOM,Dominican Republic,Disbursements,2016,6774365
-ECU,Ecuador,Disbursements,2016,857418
-EGY,Egypt,Disbursements,2016,17333150
-GNQ,Equatorial Guinea,Disbursements,2016,5171
-ETH,Ethiopia,Disbursements,2016,178766198
-FJI,Fiji,Disbursements,2016,650255
-GAB,Gabon,Disbursements,2016,41318
-GMB,Gambia,Disbursements,2016,564620
-GEO,Georgia,Disbursements,2016,1515547
-GHA,Ghana,Disbursements,2016,70414936
-GTM,Guatemala,Disbursements,2016,33190810
-GIN,Guinea,Disbursements,2016,29542977
-GNB,Guinea-Bissau,Disbursements,2016,2956445
-GUY,Guyana,Disbursements,2016,2051656
-HTI,Haiti,Disbursements,2016,107094887
-HND,Honduras,Disbursements,2016,4973542
-IND,India,Disbursements,2016,50831175
-IDN,Indonesia,Disbursements,2016,50526132
-ISR,Israel,Disbursements,2016,2629412
-JAM,Jamaica,Disbursements,2016,2641014
-JOR,Jordan,Disbursements,2016,46248790
-KAZ,Kazakhstan,Disbursements,2016,103602
-KEN,Kenya,Disbursements,2016,265864479
-KOR,Korea Republic,Disbursements,2016,15
-PRK,"Korea, Democratic Republic",Disbursements,2016,6026
-KGZ,Kyrgyzstan,Disbursements,2016,6308950
-LAO,Laos,Disbursements,2016,12161273
-LBN,Lebanon,Disbursements,2016,14193753
-LSO,Lesotho,Disbursements,2016,24420143
-LBR,Liberia,Disbursements,2016,51006538
-MDG,Madagascar,Disbursements,2016,52536624
-MWI,Malawi,Disbursements,2016,100050265
-MLI,Mali,Disbursements,2016,61459325
-MEX,Mexico,Disbursements,2016,555271
-FSM,Micronesia (Federated States),Disbursements,2016,153230
-MDA,Moldova,Disbursements,2016,453683
-MNG,Mongolia,Disbursements,2016,292108
-MOZ,Mozambique,Disbursements,2016,144647824
-NAM,Namibia,Disbursements,2016,19477547
-NPL,Nepal,Disbursements,2016,46727551
-NIC,Nicaragua,Disbursements,2016,8737978
-NER,Niger,Disbursements,2016,1150724
-NGA,Nigeria,Disbursements,2016,233164259
-PAK,Pakistan,Disbursements,2016,114044556
-PAN,Panama,Disbursements,2016,1064424
-PNG,Papua New Guinea,Disbursements,2016,4834781
-PRY,Paraguay,Disbursements,2016,1377086
-PER,Peru,Disbursements,2016,3915338
-PHL,Philippines,Disbursements,2016,34625616
-POL,Poland,Disbursements,2016,6345
-QAT,Qatar,Disbursements,2016,19334
-RUS,Russia,Disbursements,2016,22867
-RWA,Rwanda,Disbursements,2016,60402868
-WSM,Samoa,Disbursements,2016,335704
-SEN,Senegal,Disbursements,2016,55880953
-SLE,Sierra Leone,Disbursements,2016,20321601
-SOM,Somalia,Disbursements,2016,366611
-ZAF,South Africa,Disbursements,2016,245723942
-SSD,South Sudan,Disbursements,2016,38245044
-LKA,Sri Lanka,Disbursements,2016,144057
-SDF,Sudan (former),Disbursements,2016,344989
-SWZ,Swaziland,Disbursements,2016,31303330
-TJK,Tajikistan,Disbursements,2016,6019705
-TZA,Tanzania,Disbursements,2016,205860920
-THA,Thailand,Disbursements,2016,139414
-TLS,Timor-Leste,Disbursements,2016,2788938
-TGO,Togo,Disbursements,2016,883366
-TKM,Turkmenistan,Disbursements,2016,252479
-UGA,Uganda,Disbursements,2016,193058723
-UKR,Ukraine,Disbursements,2016,21754488
-UZB,Uzbekistan,Disbursements,2016,3570549
-VUT,Vanuatu,Disbursements,2016,1038951
-VNM,Vietnam,Disbursements,2016,15674056
-PSE,West Bank/Gaza,Disbursements,2016,60370661
-WLD,World,Disbursements,2016,3453035394
-YEM,Yemen,Disbursements,2016,765585
-ZMB,Zambia,Disbursements,2016,142695546
-ZWE,Zimbabwe,Disbursements,2016,74234140
+country_code,country_name,transaction_type_name,fiscal_year,current_amount,,radius,latitude,longitude
+KOR,Korea Republic,Disbursements,2016,15,,5.64197E-06,,
+COL,Colombia,Disbursements,2016,2861,,0.001076112,,
+ATG,Antigua and Barbuda,Disbursements,2016,3780,,0.001421777,,
+BRB,Barbados,Disbursements,2016,4593,,,,
+GNQ,Equatorial Guinea,Disbursements,2016,5171,,,,
+PRK,"Korea, Democratic Republic",Disbursements,2016,6026,,,,
+POL,Poland,Disbursements,2016,6345,,,,
+QAT,Qatar,Disbursements,2016,19334,,,,
+RUS,Russia,Disbursements,2016,22867,,,,
+GAB,Gabon,Disbursements,2016,41318,,,,
+KAZ,Kazakhstan,Disbursements,2016,103602,,,,
+THA,Thailand,Disbursements,2016,139414,,,,
+LKA,Sri Lanka,Disbursements,2016,144057,,,,
+FSM,Micronesia (Federated States),Disbursements,2016,153230,,,,
+TKM,Turkmenistan,Disbursements,2016,252479,,,,
+MNG,Mongolia,Disbursements,2016,292108,,,,
+ALB,Albania,Disbursements,2016,297711,,,,
+COG,Congo (Brazzaville),Disbursements,2016,327396,,,,
+WSM,Samoa,Disbursements,2016,335704,,,,
+SDF,Sudan (former),Disbursements,2016,344989,,,,
+SOM,Somalia,Disbursements,2016,366611,,,,
+MDA,Moldova,Disbursements,2016,453683,,,,
+MEX,Mexico,Disbursements,2016,555271,,0.208854903,19.20N,99.10W
+GMB,Gambia,Disbursements,2016,564620,,0.212371356,,
+FJI,Fiji,Disbursements,2016,650255,,,,
+YEM,Yemen,Disbursements,2016,765585,,,,
+ECU,Ecuador,Disbursements,2016,857418,,,,
+TGO,Togo,Disbursements,2016,883366,,,,
+VUT,Vanuatu,Disbursements,2016,1038951,> 1 million,,,
+PAN,Panama,Disbursements,2016,1064424,,,,
+NER,Niger,Disbursements,2016,1150724,,,,
+CHN,China (P.R.C.),Disbursements,2016,1164167,,,,
+BLZ,Belize,Disbursements,2016,1258162,,,,
+PRY,Paraguay,Disbursements,2016,1377086,,,,
+DJI,Djibouti,Disbursements,2016,1377725,,0.518205743,,
+GEO,Georgia,Disbursements,2016,1515547,,0.570044936,,
+GUY,Guyana,Disbursements,2016,2051656,,,,
+ISR,Israel,Disbursements,2016,2629412,,,,
+JAM,Jamaica,Disbursements,2016,2641014,,,,
+TLS,Timor-Leste,Disbursements,2016,2788938,,,,
+GNB,Guinea-Bissau,Disbursements,2016,2956445,,,,
+CPV,Cabo Verde,Disbursements,2016,3003913,,,,
+UZB,Uzbekistan,Disbursements,2016,3570549,,,,
+ARM,Armenia,Disbursements,2016,3752654,,,,
+PER,Peru,Disbursements,2016,3915338,,,,
+PNG,Papua New Guinea,Disbursements,2016,4834781,,,,
+HND,Honduras,Disbursements,2016,4973542,,,,
+TJK,Tajikistan,Disbursements,2016,6019705,,2.264200552,,
+KGZ,Kyrgyzstan,Disbursements,2016,6308950,,,,
+DOM,Dominican Republic,Disbursements,2016,6774365,,,,
+NIC,Nicaragua,Disbursements,2016,8737978,,,,
+LAO,Laos,Disbursements,2016,12161273,,,,
+BWA,Botswana,Disbursements,2016,13507566,,,,
+LBN,Lebanon,Disbursements,2016,14193753,,,,
+VNM,Vietnam,Disbursements,2016,15674056,>15 million,,,
+EGY,Egypt,Disbursements,2016,17333150,,,,
+NAM,Namibia,Disbursements,2016,19477547,,,,
+SLE,Sierra Leone,Disbursements,2016,20321601,,,,
+MMR,Burma (Myanmar),Disbursements,2016,21514817,,8.092399963,,
+UKR,Ukraine,Disbursements,2016,21754488,,,,
+CMR,Cameroon,Disbursements,2016,22712035,,,,
+BDI,Burundi,Disbursements,2016,22789793,,,,
+BEN,Benin,Disbursements,2016,23070427,,,,
+LSO,Lesotho,Disbursements,2016,24420143,,,,
+BFA,Burkina Faso,Disbursements,2016,25197220,,,,
+CIV,Cote d'Ivoire,Disbursements,2016,26680429,,,,
+GIN,Guinea,Disbursements,2016,29542977,,,,
+SWZ,Swaziland,Disbursements,2016,31303330,,,,
+GTM,Guatemala,Disbursements,2016,33190810,,12.48410849,,
+PHL,Philippines,Disbursements,2016,34625616,,,,
+SSD,South Sudan,Disbursements,2016,38245044,,,,
+KHM,Cambodia,Disbursements,2016,40987533,,,,
+AGO,Angola,Disbursements,2016,43531837,,,,
+JOR,Jordan,Disbursements,2016,46248790,,,,
+NPL,Nepal,Disbursements,2016,46727551,,,,
+IDN,Indonesia,Disbursements,2016,50526132,>50 million,,,
+IND,India,Disbursements,2016,50831175,,,,
+LBR,Liberia,Disbursements,2016,51006538,,19.18516463,,
+MDG,Madagascar,Disbursements,2016,52536624,,,,
+SEN,Senegal,Disbursements,2016,55880953,,,,
+PSE,West Bank/Gaza,Disbursements,2016,60370661,,,,
+RWA,Rwanda,Disbursements,2016,60402868,,,,
+MLI,Mali,Disbursements,2016,61459325,,,,
+GHA,Ghana,Disbursements,2016,70414936,,,,
+AFG,Afghanistan,Disbursements,2016,71421886,,,,
+ZWE,Zimbabwe,Disbursements,2016,74234140,,27.92179695,,
+BGD,Bangladesh,Disbursements,2016,91567573,,,,
+MWI,Malawi,Disbursements,2016,100050265, >1 billion,,,
+COD,Congo (Kinshasa),Disbursements,2016,102253241,,,,
+HTI,Haiti,Disbursements,2016,107094887,,,,
+PAK,Pakistan,Disbursements,2016,114044556,,42.89574765,,
+ZMB,Zambia,Disbursements,2016,142695546,,,,
+MOZ,Mozambique,Disbursements,2016,144647824,,,,
+ETH,Ethiopia,Disbursements,2016,178766198,,,,
+UGA,Uganda,Disbursements,2016,193058723,,72.61546323,,
+TZA,Tanzania,Disbursements,2016,205860920,,,,
+NGA,Nigeria,Disbursements,2016,233164259,,,,
+ZAF,South Africa,Disbursements,2016,245723942,,,,
+KEN,Kenya,Disbursements,2016,265864479,,,,
