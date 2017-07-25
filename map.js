@@ -1,17 +1,30 @@
-'use strict'
-//Depends on version of datamaps w/ country code conversion in handleArcs (http://datamaps.github.io)
-
 var data_dict = {};
 var map = new Datamap({
   element: document.getElementById('container'),
-  // projection: 'mercator',
-  arcConfig: {
-    strokeWidth: 2,
+  fills: {
+            defaultFill: '#e5e6e5', // Any hex, color name or rgb/rgba value
+			 'bubble': '#000080'
+		},
+	bubblesConfig: {
+        borderWidth: .3,
+        borderOpacity: 1,
+        borderColor: '#FFFFFF',
+		popupOnHover: true,
+	},
+
+    scope: 'world',
+    geographyConfig: {
+        popupOnHover: false,
+        highlightOnHover: true,
+    },
+	arcConfig: {
+    strokeWidth: 3,
     animationSpeed: 1200,
   },
   done: function(datamap) {
-      datamap.svg.selectAll('.datamaps-subunit').on('click', countryClicked);
-  },
+            datamap.svg.selectAll('.datamaps-subunit').on('click', countryClicked)
+ },
+ 
   geographyConfig: {
     popupTemplate: function(geo, data) { // This function should just return a string
       return '<div class="hoverinfo">' +
@@ -22,21 +35,139 @@ var map = new Datamap({
   }
 });
 
-var usa = {
+
+
+var bubbles = [{
+        name: 'Mexico',
+		country: "MEX",
+        radius: 5.42,
+        amount_received: 555271,
+        latitude: 23.20,
+        longitude: -103.10,
+		fillKey: 'bubble'
+      },{
+        name: 'Myanmar',
+        radius: 16.0,
+        amount_received: 21514817,
+        latitude: 19.8,
+        longitude: 96.15,
+		fillKey: 'bubble'
+      },{
+        name: 'Guatemala',
+        radius: 24.8,
+        amount_received: 33190810,
+        latitude: 14.61666667,
+        longitude: -90.516667,
+		fillKey: 'bubble'
+      },{
+        name: 'Liberia',
+        radius: 38.36,
+        amount_received: 510006538,
+        latitude: 6.3,
+        longitude: -10.8,
+		fillKey: 'bubble'
+      },{
+        name: 'Zimbabwe',
+        radius: 27.92,
+        amount_received: 74234140,
+        latitude: -17.816666667,
+        longitude: 31.033333,
+		fillKey: 'bubble'
+      },{
+        name: 'Georgia',
+        radius: 3.57,
+        amount_received: 1515547,
+        latitude: 41.683333333,
+        longitude: 43.833333,
+		fillKey: 'bubble'
+      },{
+        name: 'Pakistan',
+        radius: 42.9,
+        amount_received: 114044556,
+        latitude: 25.68333333,
+        longitude: 73.05,
+		fillKey: 'bubble'
+      },{
+        name: 'Tajikistan',
+        radius: 6.26,
+        amount_received: 6091705,
+        latitude: 38.55,
+        longitude: 71.766667,
+		fillKey: 'bubble'
+      },{
+        name: 'Kenya',
+        radius: 75,
+        amount_received: 265864479,
+        latitude: -1.283333333,
+        longitude: 	36.816667,
+		fillKey: 'bubble'
+      }
+/*	  ,{
+        name: 'Mexico',
+        radius: 2.1,
+        amount_received: 555271,
+        latitude: 19.20,
+        longitude: -99.10,
+		fillKey: 'bubble'
+      },{
+        name: 'Mexico',
+        radius: 2.1,
+        amount_received: 555271,
+        latitude: 19.20,
+        longitude: -99.10,
+		fillKey: 'bubble'
+      }
+	  */
+    ];
+//draw bubbles for amount given
+map.bubbles(bubbles, {
+    popupTemplate: function (geo, data) {
+            return ['<div class="hoverinfo">' +  data.name,
+            '<br/>Amount Received: ' +  data.amount_received,
+            '</div>'].join('');
+    }
+});
+
+
+/*
+ buckets: 1) public commitments made to improve national capacity; 
+ 2) public commitments made to improve others’ capacity; 
+ 3) public commitments made to undergo or support JEEs.
+*/
+
+'use strict'
+//Depends on version of datamaps w/ country code conversion in handleArcs (http://datamaps.github.io)
+
+/*var data_dict = {};
+var map = new Datamap({
+  element: document.getElementById('container'),
+  fills: {
+            defaultFill: '#e5e6e5' // Any hex, color name or rgb/rgba value
+        },
+  // projection: 'mercator',
+arcConfig: {
+    strokeWidth: 3,
+    animationSpeed: 1200,
+  },
+*/  
+  
+  var usa = {
   id: "USA",
+  
   destination_countries: [
-    {
+ /*   
+	{
       id:"ALB",
       amount_given:297711
-    },
+	},
     {
       id:"AFG",
 	  amount_given:71421886
-    },
+	},	
 	{
 	  id:"AGO",
 	  amount_given:43531837
-	}, 
+	},
     {
 	  id:"ATG",
 	  amount_given:3780
@@ -73,10 +204,12 @@ var usa = {
 	  id:"BFA",
 	  amount_given:2519722
 	},
+ */	
 	{
 	  id:"MMR",
 	  amount_given:21514817
 	},
+/* 	
 	{
 	  id:"BDI",
 	  amount_given:22789793
@@ -145,10 +278,12 @@ var usa = {
 	  id:"GHA",
 	  amount_given:1515547
 	}, 
+*/	
 	{
 	  id:"GTM",
 	  amount_given:33190810
 	}, 
+/*	
 	{
 	  id:"GIN",
 	  amount_given:29542977
@@ -166,7 +301,7 @@ var usa = {
 	  amount_given:107094887
 	}, 
 	{
-	  id:"HNG",
+	  id:"HND",
 	  amount_given:4973542
 	}, 
 	{
@@ -197,10 +332,12 @@ var usa = {
 	  id:"DOM",
 	  amount_given:6774365
 	},
+*/	
 	{
 	  id:"KEN",
 	  amount_given:265864479
 	}, 
+/*	
 	{
 	  id:"KOR",
 	  amount_given:15
@@ -220,10 +357,13 @@ var usa = {
 	{
 	  id:"LBN",
 	  amount_given:14193753
-	},{
+	},
+*/	
+	{
 	  id:"LBR",
 	  amount_given:51006538
 	},
+/*	
 	{
 	  id:"MDG",
 	  amount_given:52536624
@@ -235,11 +375,13 @@ var usa = {
 	{
 	  id:"MLI",
 	  amount_given:61459325
-	}, 
+	},
+*/	
 	{
 	  id:"MEX",
 	  amount_given:555271
 	},
+/*	
 	{
 	  id:"FSM",
 	  amount_given:153230
@@ -276,11 +418,12 @@ var usa = {
 	  id:"NGA",
 	  amount_given:233164259
 	},
+*/	
 	{
 	  id:"PAK",
 	  amount_given:114044556
-
 	},
+	/*	
 	{
 	  id:"PAN",
 	  amount_given:1064424
@@ -353,10 +496,15 @@ var usa = {
 	  id:"SWZ",
 	  amount_given:31303330
 	},
+*/	
 	{
 	  id:"TJK",
 	  amount_given:6019705
 	},
+	{ id: "GEO",
+	  amount_given: 1515547
+	},
+/*	
 	{
 	  id:"TZA",
 	  amount_given:205860920
@@ -409,12 +557,28 @@ var usa = {
 	  id:"ZMB",
 	  amount_given:142695546
 	},
+*/	
 	{
 	  id:"ZWE",
 	  amount_given:74234140
 	},
+/*	
+	{
+	  id:"CHN",
+	  amount_given:1164167
+	},
+	{
+	  id:"DJI",
+	  amount_given:1377725
+	},
+	{
+	  id:"SWZ",
+	  amount_given:31303330
+	},
+*/	
   ]
 };
+
 
 var countries = {};
 countries[usa.id] = usa;
@@ -422,26 +586,191 @@ loadCountry("USA");
 console.log(map);
 console.log(countries);
 
+
+
 function loadCountry(country) {
   var country = countries[country];
   if (country == undefined) return;
   var data = [];
-  data_dict = {};
-  
+  data_dict = {};  
+
+
+  	
   map.arc(data);
-  for (var j in country.destination_countries) {
+
+for (var j in country.destination_countries) {
     var destination_country = country.destination_countries[j];
     var link = {
       origin: country.id,
-      destination: destination_country.id
-    };
+      destination: destination_country.id,
+/*	strokeWidth: destination_country.id == "VUT"? 2 : 1 && 
+				destination_country.id == "PAN"? 2 : 1 &&
+				destination_country.id == "NER"? 2 : 1 &&
+				destination_country.id == "CHN"? 2 : 1 &&
+				destination_country.id == "BLZ"? 2 : 1 &&
+				destination_country.id == "PRY"? 2 : 1 &&
+				destination_country.id == "DJI"? 2 : 1 &&
+				destination_country.id == "GEO"? 2 : 1 &&
+				destination_country.id == "ISR"? 2 : 1 &&
+				destination_country.id == "JAM"? 2 : 1 &&
+				destination_country.id == "TLS"? 2 : 1 &&
+				destination_country.id == "GNB"? 2 : 1 &&
+				destination_country.id == "CPV"? 2 : 1 &&
+				destination_country.id == "UZB"? 2 : 1 &&
+				destination_country.id == "ARM"? 2 : 1 &&
+				destination_country.id == "PER"? 2 : 1 &&
+				destination_country.id == "PNG"? 2 : 1 &&
+				destination_country.id == "HND"? 2 : 1 &&
+				destination_country.id == "TJK"? 2 : 1 &&
+				destination_country.id == "KGZ"? 2 : 1 &&
+				destination_country.id == "DOM"? 2 : 1 &&
+				destination_country.id == "NIC"? 2 : 1 &&
+				destination_country.id == "LAO"? 2 : 1 &&
+				destination_country.id == "BWA"? 2 : 1 &&
+				destination_country.id == "LBN"? 2 : 1 &&
+				
+				
+				destination_country.id == "VNM"? 4 : 1 &&
+				destination_country.id == "EGY"? 4 : 1 &&
+				destination_country.id == "NAM"? 4 : 1 &&
+				destination_country.id == "SLE"? 4 : 1 &&
+				destination_country.id == "MMR"? 4 : 1 &&
+				destination_country.id == "UKR"? 4 : 1 &&
+				destination_country.id == "CMR"? 4 : 1 &&
+				destination_country.id == "BDI"? 4 : 1 &&
+				destination_country.id == "BEN"? 4 : 1 &&
+				destination_country.id == "LSO"? 4 : 1 &&
+				destination_country.id == "BFA"? 4 : 1 &&
+				destination_country.id == "CIV"? 4 : 1 &&
+				destination_country.id == "GIN"? 4 : 1 &&
+				destination_country.id == "SWZ"? 4 : 1 &&
+				destination_country.id == "GTM"? 4 : 1 &&
+				destination_country.id == "PHL"? 4 : 1 &&
+				destination_country.id == "SSD"? 4 : 1 &&
+				destination_country.id == "KHM"? 4 : 1 &&
+				destination_country.id == "AGO"? 4 : 1 &&
+				destination_country.id == "JOR"? 4 : 1 &&
+				destination_country.id == "NPL"? 4 : 1 &&
+				
+				destination_country.id == "IDN"? 6 : 1 &&
+				destination_country.id == "IND"? 6 : 1 &&
+				destination_country.id == "LBR"? 6 : 1 &&
+				destination_country.id == "MDG"? 6 : 1 &&
+				destination_country.id == "SEN"? 6 : 1 &&
+				destination_country.id == "PSE"? 6 : 1 &&
+				destination_country.id == "RWA"? 6 : 1 &&
+				destination_country.id == "MLI"? 6 : 1 &&
+				destination_country.id == "GHA"? 6 : 1 &&
+				destination_country.id == "AFG"? 6 : 1 &&
+				destination_country.id == "ZWE"? 6 : 1 &&
+				destination_country.id == "BDG"? 6 : 1 &&
+				
+				destination_country.id == "MWI"? 8 : 1 &&
+				destination_country.id == "COD"? 8 : 1 &&
+				destination_country.id == "HTI"? 8 : 1 &&
+				destination_country.id == "PAK"? 8 : 1 &&
+				destination_country.id == "ZMB"? 8 : 1 &&
+				destination_country.id == "MOZ"? 8 : 1 &&
+				destination_country.id == "ETH"? 8 : 1 &&
+				destination_country.id == "UGA"? 8 : 1 &&
+				destination_country.id == "TZA"? 8 : 1 &&
+				destination_country.id == "NGA"? 8 : 1 &&
+				destination_country.id == "ZAF"? 8 : 1 &&
+				destination_country.id == "KEN"? 8 : 1, 
+*/				
+    strokeColor: destination_country.id == "VUT"? '#009999' : '#DD1C77' &&
+				destination_country.id == "PAN"? '#009999' : '#DD1C77' &&
+				destination_country.id == "NER"? '#009999' : '#DD1C77' &&
+				destination_country.id == "CHN"? '#009999' : '#DD1C77' &&
+				destination_country.id == "BLZ"? '#009999' : '#DD1C77' &&
+				destination_country.id == "PRY"? '#009999' : '#DD1C77' &&
+				destination_country.id == "DJI"? '#009999' : '#DD1C77' &&
+				destination_country.id == "GEO"? '#e05267' : '#DD1C77' &&
+				destination_country.id == "ISR"? '#009999' : '#DD1C77' &&
+				destination_country.id == "JAM"? '#009999' : '#DD1C77' &&
+				destination_country.id == "TLS"? '#009999' : '#DD1C77' &&
+				destination_country.id == "GNB"? '#009999' : '#DD1C77' &&
+				destination_country.id == "CPV"? '#009999' : '#DD1C77' &&
+				destination_country.id == "UZB"? '#009999' : '#DD1C77' &&
+				destination_country.id == "ARM"? '#009999' : '#DD1C77' &&
+				destination_country.id == "PER"? '#009999' : '#DD1C77' &&
+				destination_country.id == "PNG"? '#009999' : '#DD1C77' &&
+				destination_country.id == "HND"? '#009999' : '#DD1C77' &&
+				destination_country.id == "TJK"? '#cc0000' : '#DD1C77' &&
+				destination_country.id == "KGZ"? '#009999' : '#DD1C77' &&
+				destination_country.id == "DOM"? '#009999' : '#DD1C77' &&
+				destination_country.id == "NIC"? '#009999' : '#DD1C77' &&
+				destination_country.id == "LAO"? '#009999' : '#DD1C77' &&
+				destination_country.id == "BWA"? '#009999' : '#DD1C77' &&
+				destination_country.id == "LBN"? '#f6a2c8' : '#DD1C77' &&
+				destination_country.id == "MEX"? '#e05267' : '#DD1C77' &&
+				
+				destination_country.id == "MWI"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "COD"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "HTI"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "PAK"? '#f6a2c8' : '#DD1C77' &&
+				destination_country.id == "ZMB"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "MOZ"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "ETH"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "UGA"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "TZA"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "NGA"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "ZAF"? '#4C9900' : '#DD1C77' &&
+				destination_country.id == "KEN"? '#e05267' : '#DD1C77' &&
+				
+				destination_country.id == "IDN"? '#660066' : '#DD1C77' &&
+				destination_country.id == "IND"? '#660066' : '#DD1C77' &&
+				destination_country.id == "LBR"? '#cc0000' : '#DD1C77' &&
+				destination_country.id == "MDG"? '#660066' : '#DD1C77' &&
+				destination_country.id == "SEN"? '#660066' : '#DD1C77' &&
+				destination_country.id == "PSE"? '#660066' : '#DD1C77' &&
+				destination_country.id == "RWA"? '#660066' : '#DD1C77' &&
+				destination_country.id == "MLI"? '#660066' : '#DD1C77' &&
+				destination_country.id == "GHA"? '#660066' : '#DD1C77' &&
+				destination_country.id == "AFG"? '#660066' : '#DD1C77' &&
+				destination_country.id == "ZWE"? '#f6a2c8' : '#DD1C77' &&
+				destination_country.id == "BDG"? '#660066' : '#DD1C77' &&
+				
+				destination_country.id == "VNM"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "EGY"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "NAM"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "SLE"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "MMR"? '#e05267' : '#DD1C77' &&
+				destination_country.id == "UKR"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "CMR"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "BDI"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "BEN"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "LSO"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "BFA"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "CIV"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "GIN"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "SWZ"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "GTM"? '#f6a2c8' : '#DD1C77' &&
+				destination_country.id == "PHL"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "SSD"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "KHM"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "AGO"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "JOR"? '#FF8000' : '#DD1C77' &&
+				destination_country.id == "NPL"? '#FF8000' : '#DD1C77',
+
+				
+	
+	};
+	 
+	  
     link.given = destination_country.amount_given != undefined ? destination_country.amount_given : 100;
     data.push(link);
     data_dict[destination_country.id] = link;
   }
+
   map.arc(data);
 }
 
 function countryClicked(geo) {
   loadCountry(geo.id);
 }
+
+
+
+
+
