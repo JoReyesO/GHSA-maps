@@ -119,14 +119,27 @@ var bubbles = [{
       }
 	  */
     ];
-//draw bubbles for amount given
-map.bubbles(bubbles, {
-    popupTemplate: function (geo, data) {
-            return ['<div class="hoverinfo">' +  data.name,
-            '<br/>Amount Received: ' +  data.amount_received,
-            '</div>'].join('');
-    }
-});
+	
+	function drawBubbles(geo){
+        //console.log(geo);
+        //draw bubbles for amount given
+        for (var i in bubbles) {
+            var bubble = bubbles[i];
+            if (bubble.name == geo.properties.name) {
+          //      console.log(bubble.name);
+                map.bubbles([bubble],
+                        {
+                                popupTemplate: function (data) {
+                                      return '<div class="hoverinfo">' +
+                                               '<h3>' + data.name + '</h3>' +
+                                               'Amount given: $' + data.amount_received +
+                                             '</div>';
+                                    }
+
+                        });
+            }
+        }
+}
 
 
 /*
@@ -766,9 +779,12 @@ for (var j in country.destination_countries) {
   map.arc(data);
 }
 
+//to draw bubbles and arcs on countryClicked
 function countryClicked(geo) {
-  loadCountry(geo.id);
+  drawBubbles(geo), loadCountry(geo.id);
 }
+
+
 
 
 
